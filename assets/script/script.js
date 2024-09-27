@@ -14,9 +14,6 @@ const updateUI = (e) => {
         ratingBox.style.display = "none";
         thankYouState.style.display = "flex";
     }
-    
-    
-
 }
 
 submitBtn.addEventListener("click", updateUI);

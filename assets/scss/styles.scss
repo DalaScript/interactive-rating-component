@@ -256,6 +256,7 @@ picture {
     .rating-box {
         padding: 32px 39px 32px 32px; 
         width: 412px;
+        border-radius: 30px;
 
         &__img-box {
             width: 48px;
@@ -306,6 +307,7 @@ picture {
 
     .thank-you-state {
         display: none;
+        border-radius: 30px;
         padding: 45px 40px 45px 32px;
         width: 412px;
         gap: 32px;
