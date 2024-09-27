@@ -18,7 +18,7 @@
 <body>
   <main>
 
-    <article class="rating-box">
+    <form class="rating-box" id="rating-box">
       <div class="rating-box__inner">
         <div class="rating-box__img-box">
           <picture>
@@ -41,16 +41,16 @@
         <input type="radio" name="rating" value="4" class="rating-box__number">
         <input type="radio" name="rating" value="5" class="rating-box__number">
       </div>
-      <button class="rating-box__btn" type="submit">SUBMIT</button>
-    </article>
+      <button class="rating-box__btn" id="rating-box__btn" type="submit">SUBMIT</button>
+    </form>
 
-    <article class="thank-you-state">
+    <article class="thank-you-state" id="thank-you-state">
       <picture>
         <source media="(min-width: 1440px)" width="162" height="108" srcset="./assets/images/illustration-thank-you.svg">
         <img class="thank-you-state__img" src="./assets/images/illustration-thank-you.svg" width="144" height="96" alt="than you illustration">
       </picture>
       <p class="thank-you-state__selected-rating">
-        You selected <span class="thank-you-state__rating"></span> out of 5
+        You selected <span class="thank-you-state__rating" id="thank-you-state__rating"></span> out of 5
       </p>
       <div class="thank-you-state__text-content">
         <h3 class="thank-you-state__state">
