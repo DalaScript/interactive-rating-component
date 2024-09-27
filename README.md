@@ -55,15 +55,13 @@ Here’s the translation:
 
 It wasn’t anything special, just a simple project, but I also gained experience by working more with radio type inputs.
 
-What was new for me and something I used for the first time was, "checked" selector:
+What was new for me and something I used for the first time was, selector using Pseudo-class **:checked**:
 
 ```js
 const selectedBtn = document.querySelector("input[name='rating']:checked");
 ```
 
 If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
