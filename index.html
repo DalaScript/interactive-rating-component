@@ -1,50 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
   <title>Interactive rating component | Frontend Mentor</title>
 
-  <link rel="stylesheet" href="./assets/styles.css">
+  <link rel="stylesheet" href="./assets/styles/styles.css">
 </head>
-<body>
-  <article class="rating-box">
-    <div class="rating-box__inner">
-      <img src="./assets/images/icon-star.svg" alt="star icon">
-      <h3 class="rating-box__title">
-        How did we do?
-      </h3>
-      <p class="rating-box__caption">
-        Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!
-      </p>
-    </div>
-    <div class="rating-box__numbers">
-      <input type="button" value="1" class="rating-box__number">
-      <input type="button" value="2" class="rating-box__number">
-      <input type="button" value="3" class="rating-box__number">
-      <input type="button" value="4" class="rating-box__number">
-      <input type="button" value="5" class="rating-box__number">
-    </div>
-    <button type="submit">Submit</button>
-  </article>
 
-  <article class="thank-you-state">
-    <img class="thank-you-state__img" src="./assets/images/illustration-thank-you.svg" alt="than you illustration">
-    <p class="thank-you-state__selected-rating">
-      You selected <span class="thank-you-state__rating"></span> out of 5
-    </p>
-    <div class="thank-you-state__text-content">
-      <h3 class="thank-you-state__state">
-        Thank you!
-      </h3>
-      <p class="thank-you-state__caption">
-        We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!
+<body>
+  <main>
+
+    <article class="rating-box">
+      <div class="rating-box__inner">
+        <div class="rating-box__img-box">
+          <picture>
+            <source media="(min-width:1440px)" width="16.75" height="16" srcset="./assets/images/icon-star.svg">
+            <img class="rating-box__img" width="13.96" height="13.33" src="./assets/images/icon-star.svg" alt="star icon">
+          </picture>
+        </div>
+        <h3 class="rating-box__title">
+          How did we do?
+        </h3>
+        <p class="rating-box__caption">
+          Please let us know how we did with your support request. All feedback is appreciated to help us improve our
+          offering!
+        </p>
+      </div>
+      <div class="rating-box__numbers">
+        <input type="radio" name="rating" value="1" class="rating-box__number">
+        <input type="radio" name="rating" value="2" class="rating-box__number">
+        <input type="radio" name="rating" value="3" class="rating-box__number">
+        <input type="radio" name="rating" value="4" class="rating-box__number">
+        <input type="radio" name="rating" value="5" class="rating-box__number">
+      </div>
+      <button class="rating-box__btn" type="submit">SUBMIT</button>
+    </article>
+
+    <article class="thank-you-state">
+      <picture>
+        <source media="(min-width: 1440px)" width="162" height="108" srcset="./assets/images/illustration-thank-you.svg">
+        <img class="thank-you-state__img" src="./assets/images/illustration-thank-you.svg" width="144" height="96" alt="than you illustration">
+      </picture>
+      <p class="thank-you-state__selected-rating">
+        You selected <span class="thank-you-state__rating"></span> out of 5
       </p>
-    </div>
-  </article>
-<script type="module" src="./assets/script/script.js"></script>
+      <div class="thank-you-state__text-content">
+        <h3 class="thank-you-state__state">
+          Thank you!
+        </h3>
+        <p class="thank-you-state__caption">
+          We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in
+          touch!
+        </p>
+      </div>
+    </article>
+  </main>
+
+  <script type="module" src="./assets/script/script.js"></script>
 </body>
+
 </html>

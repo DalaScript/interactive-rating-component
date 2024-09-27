@@ -3,17 +3,330 @@
 /* Primary
  ***************/
 $dark-blue: #262E38;
-$ligth-grey: #262E38;
+$ligth-grey: #969FAD;
 $orange: #FC7614;
 $very-dark-blue: #131518;
+$white: #ffffff;
 /* Primary
  ***************/
 $black-gradient: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%);
 
-
+/* Global variables
+ ******************************/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html,
+body {
+    background-color: $very-dark-blue;
+}
+
+picture {
+    display: flex;
+}
+
+/* Body variables
+ ******************************/
+ main {
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.rating-box {
+    padding: 24px 22px 32px 24px;
+    width: 327px;
+    border-radius: 15px;
+
+    background: $black-gradient;
+
+    display: block;
+
+    &__img-box {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+
+        background-color: $dark-blue;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__title {
+        margin-top: 16px;
+        font-family: 'Overpass';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+
+        color: $white;
+    }
+
+    &__caption {
+        margin-top: 17px;
+        font-family: 'Overpass';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+
+        color: $ligth-grey;
+    }
+
+    &__numbers {
+        margin-top: 24px;
+
+        display: flex;
+        justify-content: center;
+        gap: 17px;
+    }
+
+    &__number {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background: $dark-blue;
+
+        appearance: none;
+
+        position: relative;
+
+        &:checked {
+            background-color: $white;
+            &::after {
+                color: $dark-blue;
+            }
+        }
+
+        &::after {
+            color: $white;
+
+            font-family: 'Overpass';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 24px;
+
+            text-align: center;
+            letter-spacing: 0.175px;
+
+            color: $ligth-grey;
+
+            position: absolute;
+            left: 50%;
+            top: 50%;
+
+            transform: translate(-40%, -40%);
+        }
+
+        &:nth-child(1)::after {
+            content: "1";
+        }
+
+        &:nth-child(2)::after {
+            content: "2";
+        }
+
+        &:nth-child(3)::after {
+            content: "3";
+        }
+
+        &:nth-child(4)::after {
+            content: "4";
+        }
+
+        &:nth-child(5)::after {
+            content: "5";
+        }
+
+
+    }
+
+    &__btn {
+        margin-top: 24px;
+        padding: 14px 109px 13px 108px;
+        border: none;
+
+        background: $orange;
+        border-radius: 22.5px;
+
+
+
+        font-family: 'Overpass';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 18px;
+        /* identical to box height */
+        letter-spacing: 1.86667px;
+
+        /* Very Dark Blue */
+        color: $very-dark-blue;
+
+
+    }
+}
+
+.thank-you-state {
+    padding: 34px 24px 37px;
+    width: 327px;
+    border-radius: 15px;
+    background: $black-gradient;
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+
+    &__selected-rating {
+        padding: 5px 12px;
+        background: $dark-blue;
+        border-radius: 22.5px;
+
+        font-family: 'Overpass';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+
+        text-align: center;
+
+        color: $orange;
+    }
+
+    &__state {
+        font-family: 'Overpass';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+        text-align: center;
+
+        color: $white;
+    }
+
+    &__caption {
+        margin-top: 17px;
+
+        font-family: 'Overpass';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+
+        text-align: center;
+
+        color: $ligth-grey;
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .rating-box {
+        &__number {
+            cursor: pointer;
+            &:not(:checked) {
+                &:hover {
+                    background-color: $orange;
+    
+                    &::after {
+                        color: $dark-blue;
+                    }
+                }
+            }
+        }
+
+        &__btn {
+            cursor: pointer;
+            &:hover {
+                background-color: $white;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .rating-box {
+        padding: 32px 39px 32px 32px; 
+        width: 412px;
+
+        &__img-box {
+            width: 48px;
+            height: 48px;
+
+        }
+
+        &__title {
+            margin-top: 30px;
+
+            font-size: 28px;
+            line-height: 35px;
+        }
+
+        &__caption {
+            margin-top: 15px;
+
+            font-size: 15px;
+            line-height: 24px;
+        }
+
+        &__numbers {
+            gap: 21px;
+        }
+
+        &__number {
+            width: 51px;
+            height: 51px;
+
+            &::after {
+                font-size: 16px;
+                letter-spacing: 0.2px;
+            }
+        }
+
+        &__btn {
+            margin-top: 32px;
+            padding: 15px 138px 11px 137px;
+            max-width: 341px;
+
+
+            font-size: 15px;
+            line-height: 19px;
+
+            letter-spacing: 2px;
+        }
+    }
+
+    .thank-you-state {
+        display: none;
+        padding: 45px 40px 45px 32px;
+        width: 412px;
+        gap: 32px;
+
+        &__selected-rating {
+            padding: 4px 19px 4px 20px;
+
+            font-size: 15px;
+            line-height: 24px;
+        }
+
+        &__state {
+            font-size: 28px;
+            line-height: 35px;
+        }
+
+        &__caption {
+            margin-top: 15px;
+            font-size: 15px;
+            line-height: 24px;
+        }
+
+    }
+}

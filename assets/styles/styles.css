@@ -4,8 +4,250 @@
  ***************/
 /* Primary
  ***************/
+/* Global variables
+ ******************************/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #131518;
+}
+
+picture {
+  display: flex;
+}
+
+/* Body variables
+ ******************************/
+main {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.rating-box {
+  padding: 24px 22px 32px 24px;
+  width: 327px;
+  border-radius: 15px;
+  background: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%);
+  display: block;
+}
+.rating-box__img-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #262E38;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rating-box__title {
+  margin-top: 16px;
+  font-family: "Overpass";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: #ffffff;
+}
+.rating-box__caption {
+  margin-top: 17px;
+  font-family: "Overpass";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #969FAD;
+}
+.rating-box__numbers {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  gap: 17px;
+}
+.rating-box__number {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #262E38;
+  appearance: none;
+  position: relative;
+}
+.rating-box__number:checked {
+  background-color: #ffffff;
+}
+.rating-box__number:checked::after {
+  color: #262E38;
+}
+.rating-box__number::after {
+  color: #ffffff;
+  font-family: "Overpass";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.175px;
+  color: #969FAD;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-40%, -40%);
+}
+.rating-box__number:nth-child(1)::after {
+  content: "1";
+}
+.rating-box__number:nth-child(2)::after {
+  content: "2";
+}
+.rating-box__number:nth-child(3)::after {
+  content: "3";
+}
+.rating-box__number:nth-child(4)::after {
+  content: "4";
+}
+.rating-box__number:nth-child(5)::after {
+  content: "5";
+}
+.rating-box__btn {
+  margin-top: 24px;
+  padding: 14px 109px 13px 108px;
+  border: none;
+  background: #FC7614;
+  border-radius: 22.5px;
+  font-family: "Overpass";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  /* identical to box height */
+  letter-spacing: 1.86667px;
+  /* Very Dark Blue */
+  color: #131518;
+}
+
+.thank-you-state {
+  padding: 34px 24px 37px;
+  width: 327px;
+  border-radius: 15px;
+  background: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+.thank-you-state__selected-rating {
+  padding: 5px 12px;
+  background: #262E38;
+  border-radius: 22.5px;
+  font-family: "Overpass";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+  color: #FC7614;
+}
+.thank-you-state__state {
+  font-family: "Overpass";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  color: #ffffff;
+}
+.thank-you-state__caption {
+  margin-top: 17px;
+  font-family: "Overpass";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+  color: #969FAD;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .rating-box__number {
+    cursor: pointer;
+  }
+  .rating-box__number:not(:checked):hover {
+    background-color: #FC7614;
+  }
+  .rating-box__number:not(:checked):hover::after {
+    color: #262E38;
+  }
+  .rating-box__btn {
+    cursor: pointer;
+  }
+  .rating-box__btn:hover {
+    background-color: #ffffff;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .rating-box {
+    padding: 32px 39px 32px 32px;
+    width: 412px;
+  }
+  .rating-box__img-box {
+    width: 48px;
+    height: 48px;
+  }
+  .rating-box__title {
+    margin-top: 30px;
+    font-size: 28px;
+    line-height: 35px;
+  }
+  .rating-box__caption {
+    margin-top: 15px;
+    font-size: 15px;
+    line-height: 24px;
+  }
+  .rating-box__numbers {
+    gap: 21px;
+  }
+  .rating-box__number {
+    width: 51px;
+    height: 51px;
+  }
+  .rating-box__number::after {
+    font-size: 16px;
+    letter-spacing: 0.2px;
+  }
+  .rating-box__btn {
+    margin-top: 32px;
+    padding: 15px 138px 11px 137px;
+    max-width: 341px;
+    font-size: 15px;
+    line-height: 19px;
+    letter-spacing: 2px;
+  }
+
+  .thank-you-state {
+    display: none;
+    padding: 45px 40px 45px 32px;
+    width: 412px;
+    gap: 32px;
+  }
+  .thank-you-state__selected-rating {
+    padding: 4px 19px 4px 20px;
+    font-size: 15px;
+    line-height: 24px;
+  }
+  .thank-you-state__state {
+    font-size: 28px;
+    line-height: 35px;
+  }
+  .thank-you-state__caption {
+    margin-top: 15px;
+    font-size: 15px;
+    line-height: 24px;
+  }
 }
