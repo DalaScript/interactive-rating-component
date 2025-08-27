@@ -58,11 +58,11 @@ Users should be able to:
 
 ### 🔙 Previous Challenge
 
-  - previousChallengeName | *Challenge * → [View Repository](https://github.com/DalaScript/previousChallenge)
+  - Skilled E-learning Landing Page | *Challenge 18* → [View Repository](https://github.com/DalaScript/skilled-elearning-landing-page)
 
 ### 🔜 Next Challenge
 
-  - nextChallengeName | *Challenge * → [View Repository](https://github.com/DalaScript/nextChallenge)
+  - Frontend Quiz App | *Challenge * → [View Repository](https://github.com/DalaScript/frontend-quiz-app)
 
 ---
 
