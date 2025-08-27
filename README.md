@@ -62,7 +62,7 @@ Users should be able to:
 
 ### 🔜 Next Challenge
 
-  - Frontend Quiz App | *Challenge * → [View Repository](https://github.com/DalaScript/frontend-quiz-app)
+  - Frontend Quiz App | *Challenge 20* → [View Repository](https://github.com/DalaScript/frontend-quiz-app)
 
 ---
 
